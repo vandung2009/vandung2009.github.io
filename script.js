@@ -1,7 +1,7 @@
-function showPage(pageId) {
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => {
-        page.classList.remove('active');
-    });
-    document.getElementById(pageId).classList.add('active');
-}
+// Thêm class "active" vào menu hiện tại
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
