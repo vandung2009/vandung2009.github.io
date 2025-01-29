@@ -112,3 +112,66 @@
     </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vandung's Bio</title>
+    <style>
+        /* ... (giữ nguyên phần CSS) ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="avatar.jpg" alt="Vandung's Avatar" class="avatar">
+            <h1>VANDUNG</h1>
+            <p>Chào 😊</p>
+        </header>
+
+        <!-- Trình phát nhạc với autoplay -->
+        <audio controls class="music-player" id="myAudio" loop>
+            <source src="music.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ phát nhạc
+        </audio>
+
+        <div class="bio-text">
+            <p>Xin chào! Tôi là vandung</p>
+        </div>
+
+        <ul class="social-links">
+            <!-- ... (giữ nguyên social links) ... -->
+        </ul>
+
+        <footer>
+            <p>© 2024 vandung. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Thêm JavaScript để xử lý autoplay
+        window.onload = function() {
+            const audio = document.getElementById('myAudio');
+            
+            // Thử bắt đầu phát nhạc tự động
+            const playPromise = audio.play();
+            
+            // Xử lý trường hợp trình duyệt chặn autoplay
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log('Autoplay bị chặn, cần tương tác người dùng');
+                    // Thêm nút play thủ công nếu cần
+                });
+            }
+        };
+    </script>
+</body>
+</html>
+
+<!-- Thêm nút play thủ công -->
+<button onclick="document.getElementById('myAudio').play()" 
+        style="display: block; margin: 20px auto; padding: 10px 20px;">
+    Bấm để nghe nhạc
+</button>
