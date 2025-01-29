@@ -148,13 +148,10 @@ Thì tất nhiên suy nghĩ, niềm tin giá trị sẽ khác nhau</p>
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
         }
         .view-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
         .view-count {
@@ -164,6 +161,18 @@ Thì tất nhiên suy nghĩ, niềm tin giá trị sẽ khác nhau</p>
             padding: 10px;
             border-radius: 5px;
         }
+        .icon {
+            font-size: 18px; /* Giảm kích thước icon */
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #888;
+        }
     </style>
 </head>
 <body>
@@ -172,6 +181,11 @@ Thì tất nhiên suy nghĩ, niềm tin giá trị sẽ khác nhau</p>
         <div class="view-count">
             Lượt xem hồ sơ: <span id="view-count">0</span>
         </div>
+    </div>
+
+    <!-- Icon nằm ở cuối -->
+    <div class="footer">
+        <span class="icon">&#128065; Lượt xem</span> <!-- Dùng emoji làm icon -->
     </div>
 
     <script>
